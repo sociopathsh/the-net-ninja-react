@@ -2,15 +2,16 @@ import React, { Component } from "react";
 
 class Avengers extends Component {
   render() {
-    const { name, age } = this.props;
-    return (
-      <div className="avenger">
-        {/* <div>Name: {this.props.name}</div>
-        <div>Age: {this.props.age}</div> */}
-        <div>Name: {name}</div>
-        <div>Age: {age}</div>
-      </div>
-    );
+    const { avengers } = this.props;
+    const avengerList = avengers.map(avenger => {
+      return (
+        <div className="avenger" key={avenger.id}>
+          <div>Name: {avenger.name}</div>
+          <div>Age: {avenger.age}</div>
+        </div>
+      );
+    });
+    return <div className="avenger-list">{avengerList}</div>;
   }
 }
 
