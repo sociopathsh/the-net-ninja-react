@@ -12,7 +12,7 @@ class AddAvenger extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+    this.props.addAvenger(this.state);
   };
   render() {
     return (

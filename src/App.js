@@ -10,12 +10,20 @@ class App extends Component {
       { name: "Thanos", age: 50, id: 3 }
     ]
   };
+  addAvenger = avenger => {
+    // console.log(avenger);
+    avenger.id = Math.random();
+    let avengers = [...this.state.avengers, avenger];
+    this.setState({
+      avengers: avengers
+    });
+  };
   render() {
     return (
       <div className="App">
         <h1>My First React App</h1>
         <Avengers avengers={this.state.avengers} />
-        <AddAvenger />
+        <AddAvenger addAvenger={this.addAvenger} />
       </div>
     );
   }
