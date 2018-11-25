@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Avengers from "./Avengers";
+import AddAvenger from "./AddAvenger";
 
 class App extends Component {
   state = {
@@ -14,6 +15,7 @@ class App extends Component {
       <div className="App">
         <h1>My First React App</h1>
         <Avengers avengers={this.state.avengers} />
+        <AddAvenger />
       </div>
     );
   }
