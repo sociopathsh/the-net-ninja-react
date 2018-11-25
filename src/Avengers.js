@@ -14,12 +14,19 @@ import React from "react";
 //     }
 //   });
 
-const Avengers = ({ avengers }) => {
+const Avengers = ({ avengers, deleteAvenger }) => {
   const avengerList = avengers.map(avenger => {
     return avenger.age >= 30 ? (
       <div className="avenger" key={avenger.id}>
         <div>Name: {avenger.name}</div>
         <div>Age: {avenger.age}</div>
+        <button
+          onClick={() => {
+            deleteAvenger(avenger.id);
+          }}
+        >
+          Delete
+        </button>
       </div>
     ) : null;
   });
