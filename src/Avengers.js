@@ -1,4 +1,5 @@
 import React from "react";
+import "./Avengers.css";
 
 // const Avengers = ({ avengers }) => {
 //   const avengerList = avengers.map(avenger => {
